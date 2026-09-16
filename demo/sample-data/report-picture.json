@@ -1,0 +1,36 @@
+{
+  "dataId": "EXAMPLE-REPORT-PICTURE",
+  "orgCode": "DEMO-ORG",
+  "doctorCode": "DEMO-DOCTOR",
+  "checkData": {
+    "bloodPressure": {
+      "sbp": "121",
+      "rightDbp": "",
+      "pr": "86",
+      "dbp": "78",
+      "rightSbp": "",
+      "leftDbp": "",
+      "leftSbp": "",
+      "leftMbp": "",
+      "rightMbp": "",
+      "mbp": ""
+    },
+    "reportImages": {
+      "fetalHeartReportBse64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=",
+      "breathReportBse64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=",
+      "ecgReportBse64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=",
+      "ultrasoundReportBse64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII="
+    }
+  },
+  "deviceCode": "DEMO-DEVICE",
+  "deviceVersion": "EXAMPLE",
+  "time": "2026-09-16 10:00:01",
+  "checkDate": "2026-09-16 10:00:00",
+  "version": "1.0.0",
+  "personInfo": {
+    "name": "SYNTHETIC TEST",
+    "otherNumber": "DEMO-PERSON",
+    "sexCode": "0"
+  },
+  "key": "f79087e1aac6a0da1b4a3665c15ced1d"
+}

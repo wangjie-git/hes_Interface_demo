@@ -18,15 +18,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AktWaveForm {
+
+    // Historical samples use upper-case interval/axis keys; accept both spellings.
     private String hr; // Heart Rate
 	
     private String resp_rr; // Respiration Rate
 
     private String sample; // Sampling frequency/second
 
-    private String p05; // Lead I
+    private String p05; // Calibration value at +0.5 mV
 
-    private String n05; // Lead II
+    private String n05; // Calibration value at -0.5 mV
 
     private String duration; // Duration
 
@@ -57,29 +59,47 @@ public class AktWaveForm {
     private String anal; // Analysis results
 
     /** PR interval **/
+    @com.fasterxml.jackson.annotation.JsonProperty("PR")
+    @com.fasterxml.jackson.annotation.JsonAlias("pr")
     private String PR;
 
     /** QRS interval **/
+    @com.fasterxml.jackson.annotation.JsonProperty("QRS")
+    @com.fasterxml.jackson.annotation.JsonAlias("qrs")
     private String QRS;
 
     /** QT interval **/
+    @com.fasterxml.jackson.annotation.JsonProperty("QT")
+    @com.fasterxml.jackson.annotation.JsonAlias("qt")
     private String QT;
 
     /** QTC interval **/
+    @com.fasterxml.jackson.annotation.JsonProperty("QTC")
+    @com.fasterxml.jackson.annotation.JsonAlias("qtc")
     private String QTC;
 
     /** P axis **/
+    @com.fasterxml.jackson.annotation.JsonProperty("P")
+    @com.fasterxml.jackson.annotation.JsonAlias("p")
     private String P;
 
     /** QRS axis **/
+    @com.fasterxml.jackson.annotation.JsonProperty("QRSZ")
+    @com.fasterxml.jackson.annotation.JsonAlias("qrsz")
     private String QRSZ;
 
     /** T axis **/
+    @com.fasterxml.jackson.annotation.JsonProperty("T")
+    @com.fasterxml.jackson.annotation.JsonAlias("t")
     private String T;
 
     /** V5(mV) **/
+    @com.fasterxml.jackson.annotation.JsonProperty("RV5")
+    @com.fasterxml.jackson.annotation.JsonAlias("rv5")
     private String RV5;
 
     /** V1(mV) **/
+    @com.fasterxml.jackson.annotation.JsonProperty("SV1")
+    @com.fasterxml.jackson.annotation.JsonAlias("sv1")
     private String SV1;
 }

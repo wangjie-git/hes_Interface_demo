@@ -30,4 +30,8 @@ public class AktLipidFourDto {
     /**Low Density Lipoprotein**/
     private String flipidsLDL;
 
+
+    /** Very-low-density lipoprotein — present in the official samples **/
+    private String flipidsVld;
+
 }

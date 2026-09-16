@@ -6,17 +6,49 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * <p>Title:UploadHemamebaDto </p>
- * <p>Description: 数据上传--白细胞数据</p>
- * <p>Company: Konsung</p>
- * @author  HWB
- * @date 2017年7月24日下午2:43:53
+ * White blood cell data (hemameba).
+ *
+ * The reviewed APP uploads eleven fields and historical samples contain them.
+ * Their delivery by the target platform still requires confirmation.
+ * The receiver accepts all eleven; this is not a sender capability guarantee.
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class AktHemamebaDto {
-    /**White blood cell**/
+
+    /** White blood cell total **/
     private String hemameba;
+
+    /** Lymphocyte count **/
+    private String wbcLym;
+
+    /** Monocyte count **/
+    private String wbcMon;
+
+    /** Neutrophil count **/
+    private String wbcNeu;
+
+    /** Eosinophil count **/
+    private String wbcEos;
+
+    /** Basophil count **/
+    private String wbcBas;
+
+    /** Lymphocyte percentage **/
+    private String wbcLymPercent;
+
+    /** Monocyte percentage **/
+    private String wbcMonPercent;
+
+    /** Neutrophil percentage **/
+    private String wbcNeuPercent;
+
+    /** Eosinophil percentage **/
+    private String wbcEosPercent;
+
+    /** Basophil percentage **/
+    private String wbcBasPercent;
+
 }
