@@ -43,7 +43,13 @@
     </dependencyManagement>
 
     <build>
+        <finalName>hes_Interface_demo</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -60,7 +66,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.hes_interface_demo.HesInterfaceDemoApplication</mainClass>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>

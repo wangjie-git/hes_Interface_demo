@@ -36,7 +36,7 @@ public class AktMeasureDto {
     /** Data Transmission Time **/
     private String time;
 
-    /** Private Key **/
+    /** Published MD5 checksum; not a customer private key. **/
     private String key;
 
     /** Personal Basic Information **/

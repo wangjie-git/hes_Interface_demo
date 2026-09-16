@@ -12,6 +12,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class AktCheckData {
 
+    /** Do not acknowledge categories this demo cannot retain. */
+    @com.fasterxml.jackson.annotation.JsonAnySetter
+    public void unsupportedCategory(String name, com.fasterxml.jackson.databind.JsonNode value) {
+        throw new IllegalArgumentException("Unsupported checkData category: " + name);
+    }
+
     /** Electrocardiogram **/
     private AktWaveForm heart;
     
@@ -39,12 +45,6 @@ public class AktCheckData {
     /** Fetal heart monitoring **/
     private AktFetalHeartDto babyHeart;
 
-    /** Blood routine **/ 
-    private AktXcgDto xcg;
-
-    /** Three classification **/
-    private AktThreeWayDto threeWay;
-
     /** Biochemical data **/
     private AktBiochemistryDto bioche;
 
@@ -54,8 +54,20 @@ public class AktCheckData {
     /** White blood cells **/
     private AktHemamebaDto hemameba;
 
-    /** Thirteen items of biochemical analyzer **/
-    private AktBiochemicals biochemicals;
 
+    /** 电子听诊器 **/
+    private StethoscopeDto stethoscope;
+
+    /** 肺功能（呼吸家）**/
+    private BreathingDto breathing;
+
+    /** 免疫荧光项 **/
+    private ImmuneDto immune;
+
+    /** 超声设备数据 **/
+    private UltrasoundDto ultrasound;
+
+    /** 报告图像（可选）**/
+    private ReportImagesDto reportImages;
 
 }
